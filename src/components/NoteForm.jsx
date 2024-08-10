@@ -10,17 +10,17 @@ const NoteForm = ({ dark,isOpen,  onRequestClose}) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleSave = () => {
-    if (title.trim() === '') return; // Do not submit if title is empty
+    if (title.trim() === '') return; 
     dispatch(addNote({ title }));
     setTitle('');
-    navigate('/'); // Redirect to home after saving
-    onRequestClose(); // Close the modal
+    navigate('/'); 
+    onRequestClose(); 
   };
 
   const handleCancel = () => {
-    navigate('/'); // Redirect to home on cancel
+    navigate('/'); 
     setTitle('');
-    onRequestClose(); // Close the modal
+    onRequestClose(); 
   };
 
   return (

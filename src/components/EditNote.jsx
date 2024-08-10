@@ -1,10 +1,10 @@
-// EditNoteModal.js
+// EditNote.js
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { useDispatch } from 'react-redux';
 import { editNote } from '../store/actions/noteAction';
 
-const EditNoteModal = ({ dark, isOpen, onRequestClose, note,index }) => {
+const EditNote = ({ dark, isOpen, onRequestClose, note,index }) => {
   const [newTitle, setNewTitle] = useState(note.title);
   const [newDescription, setNewDescription] = useState(note.description);
   const dispatch = useDispatch();
@@ -45,4 +45,4 @@ const EditNoteModal = ({ dark, isOpen, onRequestClose, note,index }) => {
   );
 };
 
-export default EditNoteModal;
+export default EditNote;

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteNote, toggleNote } from '../store/actions/noteAction';
 import { FaEdit, FaTrash, FaCheckCircle } from 'react-icons/fa';
-import EditNoteModal from './EditNoteModal';
+import EditNote from './EditNote';
 
 const NoteItem = ({ dark,note, index }) => {
   const dispatch = useDispatch();
@@ -51,7 +51,7 @@ const NoteItem = ({ dark,note, index }) => {
         </button>
       </div>
       {isEditing && (
-        <EditNoteModal
+        <EditNote
           isOpen={isEditing}
           onRequestClose={closeEditModal}
           note={note}
