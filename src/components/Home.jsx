@@ -13,10 +13,11 @@ const Home = () => {
   }
 
   return (
-    <div className={`min-h-screen w-auto md:w-screen p-8 ${dark?"bg-black":"bg-white"}`}>
+    <div className={`min-h-screen  ${dark?"bg-black":"bg-white"}`}>
       <div className=' flex items-center justify-center'>
         <h2 className={`text-[26px] font-[500] leading-[38.87px] text-[#252525] h-[39px] w-[130px] ${dark?"text-gray-100":"text-[#252525]"}`}>TODO LIST</h2>
       </div>
+      {/* Your NoteList component */}
       <NoteList dark={dark} darkHandler={darkHandler}/>
 
       <div className="mt-8 w-[50px] h-[50px] flex justify-center ml-[60%] md:ml-[75%] items-center mb-4">
